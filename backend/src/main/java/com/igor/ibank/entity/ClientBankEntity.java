@@ -1,9 +1,6 @@
 package com.igor.ibank.entity;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 
 import java.time.LocalDate;
 import java.util.Calendar;
@@ -14,8 +11,8 @@ import java.util.Date;
 public class ClientBankEntity {
 
     @Id
-    @Column(name = "id")
-    private long id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
     @Column(name = "name")
     private String name;
     @Column(name = "nameMother")
