@@ -10,8 +10,11 @@ import java.util.List;
 @Service
 public class ClientBankRegisterService {
 
-    @Autowired
-    private ClientRepository clientRepository;
+    private final ClientRepository clientRepository;
+
+    public ClientBankRegisterService(ClientRepository clientRepository) {
+        this.clientRepository = clientRepository;
+    }
 
     public List<ClientBankEntity> getClients(){
         return clientRepository.findAll();

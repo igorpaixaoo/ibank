@@ -4,8 +4,6 @@ import jakarta.persistence.*;
 import org.antlr.v4.runtime.misc.NotNull;
 
 import java.time.LocalDate;
-import java.util.Calendar;
-import java.util.Date;
 
 @Entity
 @Table(name = "ibank_db")
@@ -30,7 +28,7 @@ public class ClientBankEntity {
     private String profession;
     @NotNull
     private String address;
-    @NotNull
+
     private String accountNumber;
     @NotNull
     private LocalDate dateBirth;

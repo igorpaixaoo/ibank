@@ -2,7 +2,7 @@ import {BrowserRouter, Routes, Route} from "react-router-dom";
 
 import './App.css';
 import Button from './components/Button';
-import Header from './components/Header';
+import Header from './components/HeaderMenu';
 import IBank from "./pages/IBank";
 import CreateAccount from "./pages/CreateAccount"
 import LoginAccount from "./pages/LoginAccount"
