@@ -1,6 +1,7 @@
 package com.igor.ibank.entity;
 
 import jakarta.persistence.*;
+import org.antlr.v4.runtime.misc.NotNull;
 
 import java.time.LocalDate;
 import java.util.Calendar;
@@ -13,23 +14,25 @@ public class ClientBankEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    @Column(name = "name")
+    @NotNull
     private String name;
-    @Column(name = "nameMother")
+    @NotNull
     private String nameMother;
-    @Column(name = "email")
+    @NotNull
     private String email;
-    @Column(name = "cpf")
+    @NotNull
     private String cpf;
-    @Column(name = "maritalStatus")
+    @NotNull
     private String maritalStatus;
-    @Column(name = "phone")
+    @NotNull
     private String phone;
-    @Column(name = "profession")
+    @NotNull
     private String profession;
-    @Column(name = "address")
+    @NotNull
     private String address;
-    @Column(name = "dateBirth")
+    @NotNull
+    private String accountNumber;
+    @NotNull
     private LocalDate dateBirth;
 
     public long getId() {
@@ -106,5 +109,9 @@ public class ClientBankEntity {
 
     public void setDateBirth(LocalDate dateBirth) {
         this.dateBirth = dateBirth;
+    }
+
+    public String getAccountNumber() {
+        return accountNumber;
     }
 }

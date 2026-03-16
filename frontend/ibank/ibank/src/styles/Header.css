@@ -1,0 +1,23 @@
+.header{
+    
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#btnAccessAccount{
+    background-image: linear-gradient(to right, #002b5c, #003877, #00499c);
+    color: white;
+    width: 170px;
+    height: 40px;
+    cursor: pointer;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    font-size: 11pt;
+}
+
+#btnAccessAccount:hover{
+    background-image: linear-gradient(to right, #000f20, #002b5c, #003169);
+}

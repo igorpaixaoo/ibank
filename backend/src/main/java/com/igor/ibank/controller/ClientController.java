@@ -16,11 +16,13 @@ public class ClientController {
     @Autowired
     private ClientBankRegisterService clientBankRegisterService;
 
+    //para testes
     @GetMapping("/clients")
     public List<ClientBankEntity> getClients(){
         return clientBankRegisterService.getClients();
     }
 
+    //procurar cliente por email
     @GetMapping("/findByEmail")
     public ClientBankEntity findClientByEmail(@RequestParam("email") String email){
         if(clientBankRegisterService.findClientByEmail(email) != null){
@@ -29,6 +31,7 @@ public class ClientController {
 
     }
 
+    //registrando um cliente
     @PostMapping("/create")
     public ClientBankEntity postClient(@RequestBody ClientBankEntity clientBankEntity){
         if(clientBankEntity != null){
