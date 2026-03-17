@@ -1,14 +1,19 @@
+import Background from "../components/BackgroundIBank";
 import Button from "../components/Button";
-import Header from "../components/HeaderMenu";
+import HeaderMenu from "../components/HeaderMenu";
+import { Menu } from "../components/Menu";
+import "../styles/IBankStyle.css"
 
 import { Link } from "react-router-dom";
 
 const IBank = () =>{
     return(
         <div className="App">
-            <Header></Header>
-            <div className=''>
-                <h1>Abra sua conta</h1>
+            <Background></Background>
+            <HeaderMenu></HeaderMenu>
+            <div className='abrirConta'>
+                <Menu></Menu>
+                <h1>Abra sua Conta</h1>
                 <Link to="/criar-conta"><Button id="btnAbrirConta" text="Clique aqui"></Button></Link>
             </div>
         </div>

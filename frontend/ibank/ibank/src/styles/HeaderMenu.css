@@ -1,10 +1,10 @@
 .header{
-    
     color: white;
     padding: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background-color: transparent;
 }
 
 #btnAccessAccount{
@@ -20,4 +20,8 @@
 
 #btnAccessAccount:hover{
     background-image: linear-gradient(to right, #000f20, #002b5c, #003169);
+}
+
+.App{
+    
 }

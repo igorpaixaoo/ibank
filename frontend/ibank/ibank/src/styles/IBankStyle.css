@@ -1,0 +1,30 @@
+
+.abrirConta{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    transform: translateX(-50%) translateY(-40%);
+}
+
+.abrirConta h1{
+    color: white;
+}
+
+#btnAbrirConta{
+    border: 1px solid #002b5c;
+    width: 130px;
+    height: 45px;
+    border-radius: 7px;
+    font-size: 12pt;
+    color: #002b5c;
+    text-transform: uppercase;
+}
+
+#btnAbrirConta:hover{
+    background-color: white;
+}
+

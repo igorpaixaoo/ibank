@@ -1,5 +1,4 @@
 import Button from "./Button";
-import "../styles/Header.css"
 import { Link } from "react-router-dom";
 
 import imgIBank from "../util/ibank.png"
