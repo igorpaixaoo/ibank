@@ -1,12 +1,13 @@
 package com.igor.ibank.entity;
 
+import jakarta.annotation.Nullable;
 import jakarta.persistence.*;
 import org.antlr.v4.runtime.misc.NotNull;
 
 import java.time.LocalDate;
 
 @Entity
-@Table(name = "ibank_db")
+@Table(name = "clients")
 public class ClientBankEntity {
 
     @Id
@@ -19,16 +20,23 @@ public class ClientBankEntity {
     @NotNull
     private String email;
     @NotNull
+    @Column(length = 14)
     private String cpf;
     @NotNull
+    @Column(length = 15)
     private String maritalStatus;
     @NotNull
+    @Column(length = 20)
     private String phone;
     @NotNull
+    @Column(length = 30)
     private String profession;
     @NotNull
     private String address;
-
+    @NotNull
+    @Column(length = 4)
+    private String password;
+    @Column(length = 8)
     private String accountNumber;
     @NotNull
     private LocalDate dateBirth;
@@ -107,6 +115,10 @@ public class ClientBankEntity {
 
     public void setDateBirth(LocalDate dateBirth) {
         this.dateBirth = dateBirth;
+    }
+
+    public void setAccountNumber(String accountNumber) {
+        this.accountNumber = accountNumber;
     }
 
     public String getAccountNumber() {

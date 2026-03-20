@@ -2,6 +2,7 @@ package com.igor.ibank.controller;
 
 import com.igor.ibank.entity.ClientBankEntity;
 import com.igor.ibank.service.ClientBankRegisterService;
+import com.igor.ibank.service.GenerateAccountBankClientService;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.HttpClientErrorException;
@@ -18,13 +19,11 @@ public class ClientController {
         this.clientBankRegisterService = clientBankRegisterService;
     }
 
-    //para testes
     @GetMapping("/clients")
     public List<ClientBankEntity> getClients(){
         return clientBankRegisterService.getClients();
     }
 
-    //procurar cliente por email
     @GetMapping("/findByEmail")
     public ClientBankEntity findClientByEmail(@RequestParam("email") String email){
         if(clientBankRegisterService.findClientByEmail(email) != null){
@@ -32,7 +31,6 @@ public class ClientController {
         }else throw new HttpClientErrorException(HttpStatus.NOT_FOUND, "Client not found");
     }
 
-    //registrando um cliente
     @PostMapping("/create")
     public ClientBankEntity postClient(@RequestBody ClientBankEntity clientBankEntity){
         if(clientBankEntity != null){

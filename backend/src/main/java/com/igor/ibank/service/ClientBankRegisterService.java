@@ -11,9 +11,11 @@ import java.util.List;
 public class ClientBankRegisterService {
 
     private final ClientRepository clientRepository;
+    private final GenerateAccountBankClientService generateAccountBankClientService;
 
-    public ClientBankRegisterService(ClientRepository clientRepository) {
+    public ClientBankRegisterService(ClientRepository clientRepository, GenerateAccountBankClientService generateAccountBankClientService) {
         this.clientRepository = clientRepository;
+        this.generateAccountBankClientService = generateAccountBankClientService;
     }
 
     public List<ClientBankEntity> getClients(){
@@ -21,6 +23,7 @@ public class ClientBankRegisterService {
     }
 
     public ClientBankEntity createClient(ClientBankEntity clientBankEntity){
+        clientBankEntity.setAccountNumber(generateAccountBankClientService.accountBank());
         return clientRepository.save(clientBankEntity);
     }
 
