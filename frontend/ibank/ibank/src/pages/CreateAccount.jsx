@@ -13,6 +13,7 @@ const CreateAccount = () =>{
     const [phone, setPhone] = useState("")
     const [profession, setProfession] = useState("")
     const [address, setAddress] = useState("")
+    const [password, setPassword] = useState("")
     const [dateBirth, setDateBirth] = useState("")
 
     //função post
@@ -27,6 +28,7 @@ const CreateAccount = () =>{
             phone: phone,
             profession: profession,
             address: address,
+            password: password,
             dateBirth: dateBirth
         }
 
@@ -59,6 +61,7 @@ const CreateAccount = () =>{
                     <label>Data de nascimento:</label>
                     <input id="dateBirthForm" type="date" value={dateBirth} onChange={(e) => setDateBirth(e.target.value)}/>
                 </div>
+                <input id="passwordForm" placeholder="Criar senha de 4 dígitos" value={password} onChange={(e) => setPassword(e.target.value)}></input>
                 <Button id="btnCreateAccount" text="Criar conta" onClick={btnClickPost}></Button>
             </form>
 

@@ -14,8 +14,10 @@ public class ClientBankEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     @NotNull
+    @Column(length = 100)
     private String name;
     @NotNull
+    @Column(length = 100)
     private String nameMother;
     @NotNull
     private String email;
@@ -123,5 +125,12 @@ public class ClientBankEntity {
 
     public String getAccountNumber() {
         return accountNumber;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+    public String getPassword() {
+        return password;
     }
 }
